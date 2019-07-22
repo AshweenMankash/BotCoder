@@ -14,6 +14,7 @@ const server = http.createServer((req, res) => {
     }
 });
 
+server.listen(process.env.PORT || 5000);
 
 var bot = new SlackBots({
     token: 'xoxb-690439174018-702054708128-Gz7A4FBaq0RJlHCo7KMHvfWf',
