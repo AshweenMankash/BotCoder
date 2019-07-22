@@ -1,0 +1,11 @@
+{
+  "name": "coderbot",
+  "version": "1.0.0",
+  "description": "A bot for my slack group",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ashween Mankash",
+  "license": "MIT"
+}
