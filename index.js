@@ -3,7 +3,7 @@ var http = require('http');
 var request = require('request');
 var app = express();
 var tokens = require('./tokens');
-
+var requestType = require('./responses/requestType');
 const token = tokens.botToken;
 
 app.use(express.json())
@@ -17,25 +17,26 @@ app.get('/', function(req, res) {
 
 
 const newLocal = app.post('/', function(req, res) {
-    console.log(req.body.event.type + "   " + req.body.event.text);
-
     res.sendStatus(200);
-    if (req.body.event.type == "message" && req.body.event.text) {
-        if (req.body.event.text.includes("hey")) {
-            var data = {
-                form: {
-                    token: token,
-                    channel: req.body.event.channel,
-                    text: "Hi! :wave: \n I'm your Uncle, Uncle bob!."
-                }
-            };
 
+    if (req.body.event) {
+
+
+        var text = requestType.hello(req.body.event);
+
+        var data = {
+            form: {
+                token: token,
+                channel: req.body.event.channel,
+                text: text
+            }
+        };
+
+        if (text)
             request.post('https://slack.com/api/chat.postMessage', data, function(error, response, body) {
                 res.json();
             });
-        }
     }
-
     const challenge = req.body.challenge;
     res.send(challenge);
 });
