@@ -1,14 +1,17 @@
 {
-  "name": "coderbot",
-  "version": "1.0.0",
-  "description": "A bot for my slack group",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Ashween Mankash",
-  "license": "MIT",
-  "dependencies": {
-    "slackbots": "^1.2.0"
-  }
+    "name": "coderbot",
+    "version": "1.0.0",
+    "description": "A bot for my slack group",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Ashween Mankash",
+    "license": "MIT",
+    "dependencies": {
+        "botkit": "^4.0.2",
+        "express": "^4.17.1",
+        "request": "^2.88.0",
+        "slackbots": "^1.2.0"
+    }
 }
