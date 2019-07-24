@@ -22,11 +22,11 @@ const newLocal = app.post('/', function(req, res) {
 app.listen(8080);
 
 app.post('/hi', function(req, res) {
-    console.log(req.body);
+    console.log(req.body.channel);
     var data = {
         form: {
             token: token,
-            channel: req.body.channel,
+            channel: "#general",
             text: "Hi! :wave: \n I'm your Uncle, Uncle bob!."
         }
     };
