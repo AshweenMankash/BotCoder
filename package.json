@@ -9,9 +9,7 @@
     "author": "Ashween Mankash",
     "license": "MIT",
     "dependencies": {
-        "botkit": "^4.0.2",
         "express": "^4.17.1",
-        "request": "^2.88.0",
-        "slackbots": "^1.2.0"
+        "request": "^2.88.0"
     }
 }
