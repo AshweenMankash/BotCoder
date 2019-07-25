@@ -9,7 +9,7 @@ module.exports.hello = function(query) {
 
     if (query.type == "member_joined_channel") {
 
-        return "Welcome :grin:";
+        return "Welcome :grin:, coder!";
 
     }
 
