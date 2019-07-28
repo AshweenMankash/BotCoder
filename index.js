@@ -11,7 +11,7 @@ app.use(express.json())
 
 app.get('/', function(req, res) {
     console.log("Sent");
-  
+
     res.send("<h1>Ashween Mankash</h1>");
 
 });
@@ -26,7 +26,7 @@ app.post('/', function(req, res) {
         console.log(text);
         var data = {
             form: {
-                token: token,
+                token: process.env.API_TOKEN,
                 channel: req.body.event.channel,
                 text: text
             }
