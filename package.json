@@ -4,12 +4,16 @@
     "description": "A bot for my slack group",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js"
+        "start": "node index.js",
+        "lole": "node -e 'require(\"./lol\").search()'"
+
     },
     "author": "Ashween Mankash",
     "license": "MIT",
     "dependencies": {
         "express": "^4.17.1",
+        "node-fetch": "^2.6.0",
+        "node-html-parser": "^1.1.16",
         "request": "^2.88.0"
     }
 }

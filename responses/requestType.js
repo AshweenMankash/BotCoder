@@ -1,7 +1,14 @@
-module.exports.hello = function(query) {
+var lol = require('../lol')
+
+module.exports.hello = async function(query) {
+
     if (query.type == "message" && query.text) {
 
         if (query.text.includes("<@ULN1LLU3S>")) {
+            if ((query.text.includes("articles"))) {
+                return lol.search().then((lists) => lists[10])
+            }
+
             if ((query.text.includes(" hey ") || query.text.includes(" hi ") || query.text.includes(" Hey ") || query.text.includes(" hello ") || query.text.includes(" Hello "))) {
                 return "Hi! :wave: \n I'm your Uncle, Uncle bob!.";
             }
